@@ -16,11 +16,12 @@
         $diff = $_POST["diff"];
         $desc = $_POST["desc"];
 
-        $result = mysqli_query($conn, "UPDATE `champ` SET `name`='$nombre',rol='$rol',difficulty='$diff',`description`='$desc' WHERE id='$id';");
-        if ($conn->query($result) === TRUE) {
-            header("002campeones.php");
-          } else {
-            echo "Error updating record: " . $conn->error;
-          }
+      $sql = "UPDATE champ SET name='$nombre', rol='$rol',difficulty='$diff', `description` ='$desc' WHERE id='$id'";
+      $result = mysqli_query($conn,$sql);
+
+        
+      echo '<script language="javascript">alert("Campeón modificado correctamente");</script>';
+      // header("002campeones.php");        
+      echo "<a class='btn btn-primary' href='002campeones.php'>Volver al listado</a>";
 
     ?>

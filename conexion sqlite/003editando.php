@@ -52,7 +52,7 @@
       </div>
       <div class="col-md-4">
         <label for="desc" class="form-label">Description</label><br>
-        <textarea name="desc" id="desc" name="desc" cols="40" rows="20"><?php echo $description?></textarea>
+        <textarea name="desc" id="desc" name="desc" cols="40" rows="20" value="<?php echo $description?>"><?php echo $description?></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
