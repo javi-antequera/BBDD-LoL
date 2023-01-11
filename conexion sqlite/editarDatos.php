@@ -20,8 +20,8 @@
       $result = mysqli_query($conn,$sql);
 
         
-      echo '<script language="javascript">alert("Campeón modificado correctamente");</script>';
-      // header("002campeones.php");        
-      echo "<a class='btn btn-primary' href='002campeones.php'>Volver al listado</a>";
+      //echo '<script language="javascript">alert("Campeón modificado correctamente");</script>';
+      header("Location: 002campeones.php");        
+      //echo "<a class='btn btn-primary' href='002campeones.php'>Volver al listado</a>";
 
     ?>
