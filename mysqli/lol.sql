@@ -13,4 +13,11 @@ INSERT INTO champ VALUES(0,"Bard","Support","High","A traveler from beyond the s
 INSERT INTO champ VALUES(0,"Kled","Fighter","Moderated","A warrior as fearless as he is ornery, the yordle Kled embodies the furious bravado of Noxus. He is an icon beloved by the empire's soldiers, distrusted by its officers, and loathed by the nobility. Many claim Kled has fought in every campaign the legions have waged, has “acquired” every military title, and has never once backed down from a fight. Though the truth of the matter is often questionable, one part of his legend is undeniable: Charging into battle on his un-trusty steed, Skaarl, Kled fights to protect what's his… and to take whatever he can get.");
 INSERT INTO champ VALUES(0,"Talon","Assasin","Moderated","Talon is the knife in the darkness, a merciless killer able to strike without warning and escape before any alarm is raised. He carved out a dangerous reputation on the brutal streets of Noxus, where he was forced to fight, kill, and steal to survive. Adopted by the notorious Du Couteau family, he now plies his deadly trade at the empire's command, assassinating enemy leaders, captains, and heroes… as well as any Noxian foolish enough to earn the scorn of their masters.");
 
- 
+ CREATE TABLE users(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    `name` VARCHAR(255),
+    `username` VARCHAR(255),
+    `password` VARCHAR(255),
+    `email` VARCHAR(255),
+ );
+ INSERT INTO users VALUES(0,"admin","admin","admin","admin@gmail.com");
