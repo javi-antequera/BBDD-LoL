@@ -11,6 +11,7 @@
         $name = $_GET["name"];
         $pas = $_GET["pas"];
     ?>
-    <h2>El usuario <?php echo $name?> ha sido introducido en el sistema con la contraseña <?php echo $pas?></h2>
+    <h1>¡Bienvenido de nuevo <?php echo $name?>!</h1>
+    <h2>Tu usuario es<?php echo $name?> y tu contraseña <?php echo $pas?></h2>
 </body>
 </html>
