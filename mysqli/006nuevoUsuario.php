@@ -3,15 +3,26 @@ $dsn='mysql:host=localhost;dbname=lol';
 $usuario='root';
 $password='';
 try{
-    $mdb = new PDO($dns, $usuario, $password);
+    $mdb = new PDO($dsn, $usuario, $password);
     $mdb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    $usu = $_POST["usuario"];
+    $pas = $_POST["password"];
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $sql = "INSERT INTO user(id,name,username,password,email) VALUES (:id,:name,:username,:password,:email)";
+
+    $sentencia = $mdb->prepare($sql);
+    $isOk = $sentencia->execute([
+        "id" => 0,
+        "name" => $name,
+        "username" => $usu,
+        "password" => password_hash($pas, PASSWORD_DEFAULT),
+        "email" => $email
+    ]);
 }catch(PDOException $e){
     echo 'Falló la conexión:' . $e->getMessage();
 }
 
-$usu = $_POST["usuario"];
-$pas = $_POST["password"];
-$sql = "INSERT INTO user(id,name,username,password,email) VALUES (:id,:name,:username,:password,:email)";
 
-$sentencia=""
 ?>

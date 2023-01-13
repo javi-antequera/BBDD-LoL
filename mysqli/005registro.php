@@ -13,22 +13,25 @@
   <h2>Registro</h2>
   <form action="006nuevoUsuario.php" method="post">
     <div class="user-box">
-      <input type="text" name="" required="">
+      <input type="text" name="name" required="">
       <label>Name</label>
     </div>
     <div class="user-box">
-      <input type="text" name="" required="">
+      <input type="text" name="usuario" required="">
       <label>Username</label>
     </div>
     <div class="user-box">
-      <input type="password" name="" required="">
+      <input type="password" name="password" required="">
       <label>Password</label>
     </div>
     <div class="user-box">
-      <input type="text" name="" required="">
+      <input type="text" name="email" required="">
       <label>Email</label>
     </div>
-    <a>
+    <!-- <button>
+      Submit
+    </button type="submit"> -->
+    <input type="submit"><a href="#">
       <span></span>
       <span></span>
       <span></span>
